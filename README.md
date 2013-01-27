@@ -1,6 +1,11 @@
 # Gracenote
 
-TODO: Write a gem description
+Work In Progress Gracenote API wrapper in Ruby.
+
+Functionality so far:
+
+* Register with Gracenote on initialization
+* Basic Track Search
 
 ## Installation
 
