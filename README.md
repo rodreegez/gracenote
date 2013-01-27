@@ -29,12 +29,12 @@ Try somehing like this in `config/initializers/gracenote.rb`
 ```ruby
 class Gracenote
   def self.current
-    @client ||= Gracenote::Client.new(ENV['GRACENOTE_CLIENT_WEB'])
+    @client ||= Gracenote.new(ENV['GRACENOTE_CLIENT_WEB'])
   end
 end
 ```
 
-Then you can just refer to `Gracenote::Client.current` to do the business.
+Then you can just refer to `Gracenote.current` to do the business.
 
 
 ## Contributing
