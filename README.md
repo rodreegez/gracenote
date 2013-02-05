@@ -6,6 +6,7 @@ Functionality so far:
 
 * Register with Gracenote on initialization
 * Basic Track Search
+* fetch artist image from gnid
 
 ## Installation
 
@@ -15,11 +16,8 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
-Or install it yourself as:
-
-    $ gem install gracenote
 
 ## Usage
 
@@ -27,11 +25,8 @@ In a Rails app, you'll want to memoise the instantiation of the client.
 Try somehing like this in `config/initializers/gracenote.rb`
 
 ```ruby
-class Gracenote
-  def self.current
-    @client ||= Gracenote.new(ENV['GRACENOTE_CLIENT_WEB'])
-  end
-end
+  client = Gracenote.new(your_client_id)
+  client.basic_track_search(artist, album, track)
 ```
 
 Then you can just refer to `Gracenote.current` to do the business.
