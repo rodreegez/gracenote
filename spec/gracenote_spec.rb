@@ -49,7 +49,7 @@ EOF
     end
   end
 
-  describe 'Gracenote.basic_track_search' do
+  describe 'Gracenote#basic_track_search' do
     it 'should call Gracenote#post with correct XML' do
       client = Gracenote.new('test-client-id', 'test-user-id')
       xml =<<EOF
@@ -87,7 +87,7 @@ EOF
     end
   end
 
-  describe 'Gracenote.artist_image' do
+  describe 'Gracenote#artist_image' do
     it 'should call Gracenote#post with correct XML' do
       client = Gracenote.new('test-client-id', 'test-user-id')
       xml =<<EOF
